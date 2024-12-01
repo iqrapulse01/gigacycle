@@ -187,6 +187,12 @@ p {
   .header h1 {
     margin-top: 50px;
   }
+  .blob .liquid-shape{
+align-items: center;
+/* text-align: center; */
+justify-content: center;
+
+  }
 }
 @media (max-width: 592px) {
   .liquid-shape,
@@ -255,3 +261,13 @@ p {
   opacity: 1;
   transform: translateX(0);
 }
+@keyframes slideAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
