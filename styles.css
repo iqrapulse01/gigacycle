@@ -23,7 +23,7 @@ h1 {
   font-weight: 300;
   letter-spacing: 2px;
   font-size: 48px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 p {
   font-family: "Lato", sans-serif;
