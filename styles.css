@@ -181,11 +181,21 @@ p {
     padding: 10px 0;
   }
   .waves {
-    height: 120px;
-    min-height: 60px;
+    height: 80px;
+    min-height: 80px;
   }
   .header h1 {
-    margin-top: 120px;
+    margin-top: 45px !important;
+  }
+  .liquid-shape,
+  .image-rotation-container {
+    margin-left: 30%;
+  }
+}
+@media (max-width: 648px) {
+    .liquid-shape,
+  .image-rotation-container {
+    margin-left: 20%;
   }
 }
 @media (max-width: 592px) {
@@ -197,14 +207,21 @@ p {
 @media (max-width: 520px) {
   .liquid-shape,
   .image-rotation-container {
-    margin-left: 12%;
+    margin-left: 15%;
   }
 }
 @media (max-width: 463px) {
-  .liquid-shape,
-  .image-rotation-container {
-    margin-left: 12%;
-  }
+    .liquid-shape,
+    .image-rotation-container {
+      margin-left: 12%;
+    }
+    @media (max-width: 408px) {
+        .liquid-shape,
+        .image-rotation-container {
+          margin-left: 10%;
+        }
+    }
+
 }
 /* Animation */
 
