@@ -201,6 +201,7 @@ p {
     margin-left: 15%;
   }
 }
+
 @media (max-width: 463px) {
     .liquid-shape,
     .image-rotation-container {
@@ -212,7 +213,14 @@ p {
           margin-left: 10%;
         }
     }
-
+    @media (max-width: 412px) {
+        @media (max-width: 408px) {
+            .liquid-shape,
+            .image-rotation-container {
+              margin-left: 6%;
+            }
+        }
+    }
 }
 /* Animation */
 
