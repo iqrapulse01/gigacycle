@@ -3,7 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  color: aliceblue;
+  color: rgb(250, 251, 252) !important;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   height: 0;
@@ -34,37 +35,72 @@ p {
 }
 
 .header {
+  height:89vh; 
+  width: 100%;
   position: relative;
   text-align: center;
-  background: linear-gradient(
-    60deg,
-    rgba(255, 0, 0, 1) 0%,
-    rgba(0, 150, 255, 1) 100%
-  );
-  color: white;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-image: url(images/cycle4.png);
+  color: rgb(10, 10, 10);
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+
 }
-
-
 .inner-header img {
   margin-top: 60px;
 }
+.innerheader-content{
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-bottom: 30px;
 
+}
 .waves {
   position: relative;
   width: 100%;
-  height: 60vh;
-  margin-bottom: -7px; /*Fix for safari gap*/
-  min-height: 100px;
-  max-height: 150px;
+  height: 20vh;
+  margin: 0px;
+  /* min-height: 100px; */
+  /* max-height: 150px; */
 }
 
 .container {
-  background: rgba(0, 170, 255, 0.3);
+  background-image: url(images/cycle5.png);
   padding: 10px;
   line-height: 1.2rem;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .container p {
-  color: rgb(5, 127, 189);
+  color: rgb(251, 253, 253);
+}
+.welcome{
+  background-image: url(images/cycle3.png);
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: rgb(243, 241, 241) !important;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+ 
+}
+#welcome{
+  background-color: rgba(5, 5, 5, 0.6);
+  padding: 20px;
+  margin-top: 40px;
+}
+.welcome p{
+  color: rgb(250, 247, 247);
+}
+.bgcolor{
+  background: rgba(0, 0, 0, 0.7);
 }
 /* Now */
 .rowOne {
@@ -78,23 +114,22 @@ p {
 }
 
 .left-column p {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.7);
   padding: 10px;
   border-radius: 5px;
   margin-top: 5px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
 }
 
 .right-column p {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.7);
   padding: 10px;
-
   border-radius: 5px;
   margin-top: 5px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
 }
 
@@ -103,61 +138,58 @@ p {
   gap: 10px;
 }
 
-.full-width-row {
+.full-width-row{
   text-align: center;
+  background-image: url(images/ebike1.png);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  border-radius: 5px;
+}
+.full-width-row h2{
+  padding: 15px;
+  border-radius: 5px;
+  background: rgb(1, 80, 119);
+
+}
+.full-width-row p{
+color: rgb(252, 251, 251);
+font-weight: 700;
+background: rgba(0, 0, 0, 0.7);
+border-radius: 5px;
+padding: 20px 6px;
+line-height: 1.5rem;
 }
 
 .two-columns {
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  align-items: center;
-  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+  
 }
+
 /* ---------  */
-/* welcom portion  */
-.image-rotation-container {
-  position: absolute;
-  top: 170px;
-  left: 170px;
-  transform: translate(-50%, -50%);
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: var(--neon-box-shadow);
+#video-section {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 80%; 
+  width: 80%;
+  overflow: hidden; 
+  position: relative;
 }
 
-.rotating-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+#video-section video {
+  height: 80%;
+  width: 80%;
   object-fit: cover;
-  border-radius: 50%;
-  animation: fade-in-out 2s infinite;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(164, 4, 4, 0.9), 0 0 20px rgba(164, 4, 4, 0.9),
-    0 0 30px rgba(164, 4, 4, 0.9), 0 0 40px rgba(164, 4, 4, 0.9),
-    0 0 70px rgba(164, 4, 4, 0.9), 0 0 80px rgba(164, 4, 4, 0.9),
-    0 0 100px rgba(164, 4, 12, 0.9), 0 0 150px rgba(164, 4, 4, 0.9);
-}
-
-.rotating-image:nth-child(2) {
-  animation-delay: 1s;
-}
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 1;
-  }
-  45% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* Responsive  */
